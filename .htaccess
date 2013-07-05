@@ -1,0 +1,11 @@
+# Enable Rewriting  
+RewriteEngine on  
+  
+# Rewrite user URLs  
+#   Input:  user/NAME/  
+#   Output: user.php?id=NAME  
+# RewriteRule ^user/(\w+)/?$ user.php?id=$1
+
+RewriteRule ^(\w+)x(\w+)/?(\w*)/?(\w*)/?(text=)?([\w\s\d\:;\(\)(\)]*)$ index.php?w=$1&h=$2&fc=$3&bg=$4&text=$6
+
+# RewriteRule ^(\w+)x(\w+)/?(\w*)/?(\w*)/?$ index.php?w=$1&h=$2&fc=$3&bg=$4
